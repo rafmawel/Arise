@@ -114,120 +114,121 @@ const RANKS=[
 // dw = default starting weight (kg) for someone returning after ~4 months off
 // tip = short coaching tip shown in workout
 const EX={
-squat:{n:"Squat",m:"Jambes",s:"STR",i:"🦵",dw:40,tip:"Barre sur les trapèzes, descends au moins cuisses parallèles. Pousse les genoux vers l'extérieur."},
-bench:{n:"Développé Couché",m:"Pecs",s:"STR",i:"💪",dw:35,tip:"Omoplates serrées, pieds au sol. Descends contrôlé, pousse explosif."},
-row:{n:"Rowing Barre",m:"Dos",s:"STR",i:"🏋️",dw:35,tip:"Buste à 45°, tire vers le nombril. Serre les omoplates en haut."},
-ohp:{n:"Dév. Militaire",m:"Épaules",s:"STR",i:"🔱",dw:25,tip:"Départ menton, pousse vertical. Gainage du core obligatoire."},
-deadlift:{n:"Soulevé de Terre",m:"Dos/Jambes",s:"STR",i:"⚡",dw:50,tip:"Dos neutre, barre collée aux tibias. Pousse le sol avec les pieds."},
-incDB:{n:"Dév. Incliné DB",m:"Pecs",s:"STR",i:"🔥",dw:12,tip:"Banc à 30-45°, haltères. Étire bien les pecs en bas du mouvement."},
-latPull:{n:"Tirage Vertical",m:"Dos",s:"STR",i:"🎯",dw:40,tip:"Tire vers la poitrine, pas derrière la nuque. Initie avec les coudes."},
-lunge:{n:"Fentes",m:"Jambes",s:"AGI",i:"🦿",dw:10,tip:"Grand pas, genou arrière frôle le sol. Haltères à bout de bras."},
-legP:{n:"Presse Cuisses",m:"Jambes",s:"STR",i:"🦵",dw:70,tip:"Pieds largeur épaules, descends jusqu'à 90°. Ne verrouille pas les genoux."},
-latR:{n:"Élév. Latérales",m:"Épaules",s:"END",i:"🪽",dw:6,tip:"Bras légèrement fléchis, monte jusqu'aux épaules. Contrôle la descente."},
-curl:{n:"Curl Biceps",m:"Bras",s:"STR",i:"💪",dw:10,tip:"Coudes fixes le long du corps. Pas de balancier."},
-tri:{n:"Triceps Poulie",m:"Bras",s:"STR",i:"🔨",dw:15,tip:"Coudes collés au corps, extension complète. Serre en bas."},
-fPull:{n:"Face Pull",m:"Épaules",s:"VIT",i:"🎯",dw:12,tip:"Corde haute, tire vers le visage. Rotations externes en fin de mouvement."},
-cRow:{n:"Rowing Câble",m:"Dos",s:"STR",i:"🏋️",dw:35,tip:"Assis, tire vers le ventre. Ouvre la poitrine en fin de mouvement."},
-legC:{n:"Leg Curl",m:"Ischio",s:"STR",i:"🦵",dw:25,tip:"Mouvement contrôlé, serre bien en haut. Ischio-jambiers ciblés."},
-plank:{n:"Planche",m:"Core",s:"VIT",i:"🛡️",dw:0,tip:"Corps droit, fessiers et abdos contractés. Respire normalement."},
-abW:{n:"Ab Wheel",m:"Core",s:"VIT",i:"🎡",dw:0,tip:"Avance lentement, rentre le ventre. Commence sur les genoux."},
-rope:{n:"Corde à Sauter",m:"Cardio",s:"AGI",i:"⚡",dw:0,tip:"Sauts légers sur la pointe des pieds. Poignets souples, pas les bras."},
-tread:{n:"Tapis (course)",m:"Cardio",s:"END",i:"🏃",dw:0,tip:"Commence à 8-9 km/h, augmente progressivement. Foulée naturelle."},
-// Phase 2
-fSquat:{n:"Front Squat",m:"Jambes/Core",s:"STR",i:"🦵",dw:30,tip:"Barre sur les deltoïdes avant, coudes hauts. Le core travaille à fond."},
-dips:{n:"Dips",m:"Pecs/Triceps",s:"STR",i:"💪",dw:0,tip:"Penche-toi légèrement en avant pour cibler les pecs. Descends à 90°."},
-chinUp:{n:"Tractions Supination",m:"Dos/Biceps",s:"STR",i:"🏋️",dw:0,tip:"Paumes vers toi, tire la poitrine vers la barre. Full extension en bas."},
-hipT:{n:"Hip Thrust",m:"Fessiers",s:"STR",i:"🍑",dw:40,tip:"Dos sur le banc, barre sur les hanches. Serre les fessiers en haut."},
-dbRow:{n:"Rowing Haltère",m:"Dos",s:"STR",i:"🏋️",dw:16,tip:"Un genou sur le banc. Tire le coude vers le plafond."},
-hamC:{n:"Romanian Deadlift",m:"Ischio",s:"STR",i:"⚡",dw:35,tip:"Jambes quasi tendues, descends la barre le long des cuisses. Étirement ischio."},
-incBench:{n:"Dév. Incliné Barre",m:"Pecs Haut",s:"STR",i:"🔥",dw:30,tip:"Banc à 30°, même technique que le couché. Cible le haut des pecs."},
-// Phase 3
-bulgSplit:{n:"Bulgarian Split Squat",m:"Jambes",s:"STR",i:"🦵",dw:10,tip:"Pied arrière sur un banc, descends vertical. Haltères à bout de bras."},
-cableFly:{n:"Écarté Câble",m:"Pecs",s:"END",i:"🔥",dw:8,tip:"Bras légèrement fléchis, grand mouvement d'ouverture. Serre en fermant."},
-tBar:{n:"T-Bar Row",m:"Dos",s:"STR",i:"🏋️",dw:30,tip:"Buste penché, tire vers la poitrine. Épaisseur du dos garantie."},
-arnP:{n:"Arnold Press",m:"Épaules",s:"STR",i:"🔱",dw:10,tip:"Départ paumes vers toi, rotation pendant la montée. Mouvement complet."},
-hammerC:{n:"Curl Marteau",m:"Bras",s:"STR",i:"💪",dw:10,tip:"Paumes face à face, coudes fixes. Cible le brachio-radial."},
-dip2:{n:"Dips Lestés",m:"Pecs/Tri",s:"STR",i:"💪",dw:5,tip:"Ajoute du poids avec ceinture. Même technique que les dips classiques."},
-pullUp:{n:"Tractions Pronation",m:"Dos",s:"STR",i:"🏋️",dw:0,tip:"Paumes vers l'extérieur, largeur épaules+. Tire les coudes vers le bas."},
-cable:{n:"Cross-Over Câble",m:"Pecs",s:"END",i:"🔥",dw:8,tip:"Poulies hautes, croise les mains devant toi. Squeeze en bas."},
-// Phase 4
-clean:{n:"Power Clean",m:"Full Body",s:"STR",i:"🔥",dw:30,tip:"Tirage explosif depuis le sol, réception en front rack. Technique > charge."},
-pushP:{n:"Push Press",m:"Épaules/Jambes",s:"STR",i:"🔱",dw:30,tip:"Petit dip des genoux puis pousse explosive. Utilise les jambes."},
-snatchP:{n:"Snatch Pull",m:"Full Body",s:"AGI",i:"⚡",dw:25,tip:"Prise large, tirage explosif jusqu'aux hanches. Hausse d'épaules en haut."},
-hSquat:{n:"Hack Squat",m:"Jambes",s:"STR",i:"🦵",dw:50,tip:"Pieds bas sur la plateforme pour cibler les quadriceps."},
-wPullUp:{n:"Tractions Lestées",m:"Dos",s:"STR",i:"🏋️",dw:5,tip:"Ceinture + poids. Même mouvement propre qu'au poids du corps."},
-clJerk:{n:"Clean & Jerk",m:"Full Body",s:"STR",i:"🔥",dw:30,tip:"Clean + fente avant + push. Technique parfaite, charge progressive."},
-pauseB:{n:"Pause Bench",m:"Pecs",s:"STR",i:"💪",dw:30,tip:"2-3s de pause barre sur la poitrine. Élimine l'élan, force pure."},
-defDL:{n:"Deficit Deadlift",m:"Dos/Jambes",s:"STR",i:"⚡",dw:40,tip:"Sur un step de 5cm. Plus d'amplitude = plus de force depuis le sol."},
+// === HALTÉROPHILIE — Mouvements complets ===
+pClean:{n:"Power Clean",m:"Full Body",s:"STR",i:"🔥",dw:30,tip:"Tirage explosif, réception haute en front rack. Triple extension hanches-genoux-chevilles."},
+clean:{n:"Clean",m:"Full Body",s:"STR",i:"🔥",dw:25,tip:"Comme le Power Clean mais réception en squat complet. La mobilité est clé."},
+cj:{n:"Clean & Jerk",m:"Full Body",s:"STR",i:"🏆",dw:25,tip:"Clean puis jerk en fente ou en puissance. Le mouvement roi de l'haltéro."},
+pSnatch:{n:"Power Snatch",m:"Full Body",s:"AGI",i:"⚡",dw:20,tip:"Prise large, un seul mouvement du sol au-dessus de la tête. Réception haute."},
+snatch:{n:"Snatch",m:"Full Body",s:"AGI",i:"⚡",dw:20,tip:"Le plus technique. Prise large, réception en overhead squat. Patience et technique."},
+pushP:{n:"Push Press",m:"Épaules/Jambes",s:"STR",i:"🔱",dw:30,tip:"Dip des genoux puis poussée explosive verticale. Les jambes initient le mouvement."},
+pushJ:{n:"Push Jerk",m:"Full Body",s:"STR",i:"🔱",dw:25,tip:"Comme le Push Press mais tu te glisses sous la barre. Plus efficace en charge lourde."},
+splitJ:{n:"Split Jerk",m:"Full Body",s:"AGI",i:"🔱",dw:25,tip:"Réception en fente. Pied avant plat, pied arrière sur la pointe. Stabilise avant de te relever."},
+
+// === HALTÉROPHILIE — Dérivés / Éducatifs ===
+hClean:{n:"Hang Clean",m:"Full Body",s:"STR",i:"🔥",dw:25,tip:"Départ barre aux hanches. Travaille la 2ème traction et la vitesse de passage sous la barre."},
+hSnatch:{n:"Hang Snatch",m:"Full Body",s:"AGI",i:"⚡",dw:15,tip:"Départ barre aux hanches, prise large. Idéal pour travailler la vitesse."},
+clnPull:{n:"Clean Pull",m:"Dos/Jambes",s:"STR",i:"🏋️",dw:40,tip:"Tirage du clean sans passer sous la barre. Monte sur les pointes, hausse d'épaules."},
+snPull:{n:"Snatch Pull",m:"Dos/Jambes",s:"STR",i:"🏋️",dw:30,tip:"Prise large, tirage explosif. Hausse d'épaules en haut, bras tendus."},
+muscleSn:{n:"Muscle Snatch",m:"Épaules/Dos",s:"STR",i:"⚡",dw:15,tip:"Snatch sans passage sous la barre. Éducatif pour le chemin de barre."},
+snGrDL:{n:"Snatch Grip Deadlift",m:"Dos/Jambes",s:"STR",i:"⚡",dw:40,tip:"SDT avec prise large de snatch. Renforce le dos et la position de départ."},
+clnDL:{n:"Clean Deadlift",m:"Dos/Jambes",s:"STR",i:"⚡",dw:50,tip:"SDT avec prise de clean. Reproduis exactement ta position de départ de clean."},
+bhndNP:{n:"Behind Neck Press",m:"Épaules",s:"STR",i:"🔱",dw:20,tip:"Barre derrière la nuque, pousse verticale. Excellent pour la mobilité et la stabilité overhead."},
+sots:{n:"Sots Press",m:"Épaules/Mobilité",s:"VIT",i:"🧘",dw:15,tip:"Dév. militaire en position basse du squat. La mobilité ultime."},
+
+// === SQUATS ===
+squat:{n:"Back Squat",m:"Jambes",s:"STR",i:"🦵",dw:40,tip:"Barre sur les trapèzes, descends sous le parallèle. Base de toute la force."},
+fSquat:{n:"Front Squat",m:"Jambes/Core",s:"STR",i:"🦵",dw:30,tip:"Barre en front rack, coudes hauts. Essentiel pour le clean. Dos le plus droit possible."},
+ohSquat:{n:"Overhead Squat",m:"Full Body/Mobilité",s:"VIT",i:"🦵",dw:15,tip:"Barre au-dessus de la tête, bras verrouillés. Le test ultime de mobilité pour le snatch."},
+pauseS:{n:"Pause Squat",m:"Jambes",s:"STR",i:"🦵",dw:35,tip:"3s de pause en bas. Élimine le rebond, construit la force dans la position basse."},
+
+// === TIRAGES / ACCESSOIRES ===
+rdl:{n:"Romanian Deadlift",m:"Ischio/Dos",s:"STR",i:"⚡",dw:35,tip:"Jambes quasi tendues, descends la barre le long des cuisses. Étirement ischio."},
+fPull:{n:"Face Pull",m:"Épaules",s:"VIT",i:"🎯",dw:12,tip:"Corde haute, tire vers le visage. Santé des épaules. Indispensable en haltéro."},
+pullUp:{n:"Tractions",m:"Dos",s:"STR",i:"🏋️",dw:0,tip:"Pronation, largeur épaules+. Tire les coudes vers le bas. Force du haut du dos."},
+row:{n:"Rowing Barre",m:"Dos",s:"STR",i:"🏋️",dw:35,tip:"Buste à 45°, tire vers le nombril. Dos solide pour les tirages lourds."},
+goodM:{n:"Good Morning",m:"Ischio/Dos",s:"STR",i:"🏋️",dw:20,tip:"Barre sur les trapèzes, penche le buste. Renforce toute la chaîne postérieure."},
+
+// === CORE ===
+plank:{n:"Planche",m:"Core",s:"VIT",i:"🛡️",dw:0,tip:"Corps droit, fessiers et abdos contractés. Gainage essentiel pour l'haltéro."},
+abW:{n:"Ab Wheel",m:"Core",s:"VIT",i:"🎡",dw:0,tip:"Avance lentement, rentre le ventre. Core solide = transfert de force."},
+lSit:{n:"L-Sit Hold",m:"Core/Épaules",s:"VIT",i:"🛡️",dw:0,tip:"Sur parallettes ou barres. Jambes à l'horizontale. Force abdominale profonde."},
+
+// === COURSE ===
+easyRun:{n:"Footing Facile",m:"Cardio",s:"END",i:"🏃",dw:0,tip:"Allure conversationnelle, 65-70% FCmax. Tu dois pouvoir tenir une conversation."},
+tempo:{n:"Tempo Run",m:"Cardio",s:"END",i:"🏃",dw:0,tip:"Allure soutenue, 80-85% FCmax. Inconfortable mais tenable sur la durée."},
+interval:{n:"Intervalles",m:"Cardio",s:"AGI",i:"🏃‍♂️",dw:0,tip:"30s-1min rapide / 1-2min récup. Pousse l'intensité sur les phases rapides."},
+longRun:{n:"Sortie Longue",m:"Cardio",s:"END",i:"🏃",dw:0,tip:"Allure facile, durée progressive. Construis l'endurance aérobie."},
+hillRun:{n:"Côtes / Inclinaison",m:"Cardio/Jambes",s:"STR",i:"🏔️",dw:0,tip:"6-8% d'inclinaison sur tapis ou trouve une côte dehors. Puissance de course."},
+rope:{n:"Corde à Sauter",m:"Cardio/Mollets",s:"AGI",i:"⚡",dw:0,tip:"Sauts légers sur les pointes. Bon complément pour le cardio et la coordination."},
 };
 
 const PHASES=[
-{id:0,name:"Réadaptation",sub:"Retrouve tes repères",color:"var(--cyan)",icon:"🌱",minWeek:1,maxWeek:2,
+{id:0,name:"Fondations",sub:"Technique & reprise",color:"var(--cyan)",icon:"🌱",minWeek:1,maxWeek:2,
 dungeon:"Forêt de l'Éveil",dungeonIcon:"🌲",
 sessions:[
-  {name:"PUSH & LEGS",sub:"Force brute",color:"var(--pink)",ex:[
-    {id:"squat",s:4,r:"8-10",rest:120},{id:"bench",s:4,r:"8-10",rest:120},{id:"ohp",s:3,r:"10-12",rest:90},
-    {id:"latR",s:3,r:"12-15",rest:60},{id:"tri",s:3,r:"10-12",rest:60},{id:"plank",s:3,r:"45s",rest:60}]},
-  {name:"PULL & LEGS",sub:"Puissance dorsale",color:"var(--cyan)",ex:[
-    {id:"deadlift",s:4,r:"6-8",rest:150},{id:"latPull",s:4,r:"8-10",rest:90},{id:"cRow",s:3,r:"10-12",rest:90},
-    {id:"fPull",s:3,r:"15-20",rest:60},{id:"curl",s:3,r:"10-12",rest:60},{id:"legC",s:3,r:"10-12",rest:60}]},
-  {name:"FULL BODY",sub:"Équilibre total",color:"var(--gold)",ex:[
-    {id:"legP",s:4,r:"10-12",rest:120},{id:"incDB",s:4,r:"8-10",rest:90},{id:"row",s:4,r:"8-10",rest:90},
-    {id:"lunge",s:3,r:"10/j",rest:90},{id:"latR",s:3,r:"12-15",rest:60},{id:"abW",s:3,r:"10-12",rest:60}]},
-  {name:"CARDIO & FORCE",sub:"Jour bonus",color:"var(--purple)",ex:[
-    {id:"rope",s:5,r:"2min",rest:60},{id:"squat",s:3,r:"12-15",rest:90},{id:"bench",s:3,r:"12-15",rest:90},
-    {id:"row",s:3,r:"12-15",rest:90},{id:"tread",s:1,r:"15min",rest:0},{id:"plank",s:3,r:"60s",rest:45}]}
+  {name:"CLEAN DAY",sub:"Technique clean + front squat",color:"var(--pink)",ex:[
+    {id:"hClean",s:5,r:"3",rest:120},{id:"clnPull",s:4,r:"5",rest:90},{id:"fSquat",s:4,r:"6-8",rest:120},
+    {id:"pushP",s:4,r:"5-6",rest:90},{id:"fPull",s:3,r:"15",rest:60},{id:"plank",s:3,r:"45s",rest:45}]},
+  {name:"COURSE STRUCTURÉE",sub:"Reprends le souffle",color:"var(--cyan)",ex:[
+    {id:"easyRun",s:1,r:"10min",rest:0},{id:"interval",s:5,r:"30s vite / 90s marche",rest:0},
+    {id:"easyRun",s:1,r:"10min",rest:0},{id:"rope",s:3,r:"2min",rest:60}]},
+  {name:"SNATCH DAY",sub:"Technique arraché + back squat",color:"var(--gold)",ex:[
+    {id:"muscleSn",s:4,r:"3",rest:90},{id:"hSnatch",s:4,r:"3",rest:120},{id:"ohSquat",s:4,r:"5",rest:120},
+    {id:"snPull",s:3,r:"5",rest:90},{id:"squat",s:4,r:"6-8",rest:120},{id:"abW",s:3,r:"10",rest:45}]},
+  {name:"BONUS",sub:"Au choix selon l'envie",color:"var(--purple)",ex:[
+    {id:"easyRun",s:1,r:"25min",rest:0},{id:"hClean",s:3,r:"3",rest:90},{id:"hSnatch",s:3,r:"3",rest:90},
+    {id:"rdl",s:3,r:"10",rest:90},{id:"goodM",s:3,r:"10",rest:60},{id:"lSit",s:3,r:"20s",rest:45}]}
 ]},
 
-{id:1,name:"Force Fondamentale",sub:"Construis la base",color:"var(--orange)",icon:"🔥",minWeek:3,maxWeek:5,
+{id:1,name:"Construction",sub:"Charge progressive",color:"var(--orange)",icon:"🔥",minWeek:3,maxWeek:5,
 dungeon:"Caverne du Titan",dungeonIcon:"🏔️",
 sessions:[
-  {name:"UPPER PUSH",sub:"Poussée lourde",color:"var(--pink)",ex:[
-    {id:"bench",s:5,r:"5-6",rest:150},{id:"incBench",s:4,r:"6-8",rest:120},{id:"ohp",s:4,r:"8-10",rest:90},
-    {id:"dips",s:3,r:"8-12",rest:90},{id:"latR",s:4,r:"12-15",rest:60},{id:"tri",s:3,r:"10-12",rest:60}]},
-  {name:"LOWER POWER",sub:"Jambes de titan",color:"var(--cyan)",ex:[
-    {id:"squat",s:5,r:"5-6",rest:180},{id:"fSquat",s:3,r:"8-10",rest:120},{id:"hipT",s:4,r:"8-10",rest:90},
-    {id:"hamC",s:3,r:"10-12",rest:90},{id:"legC",s:3,r:"10-12",rest:60},{id:"plank",s:3,r:"60s",rest:45}]},
-  {name:"UPPER PULL",sub:"Dos d'acier",color:"var(--gold)",ex:[
-    {id:"deadlift",s:5,r:"5-6",rest:180},{id:"chinUp",s:4,r:"6-10",rest:120},{id:"dbRow",s:4,r:"8-10",rest:90},
-    {id:"fPull",s:3,r:"15-20",rest:60},{id:"curl",s:3,r:"10-12",rest:60},{id:"abW",s:3,r:"10-12",rest:60}]},
-  {name:"FULL + CARDIO",sub:"Jour complet",color:"var(--purple)",ex:[
-    {id:"rope",s:4,r:"3min",rest:60},{id:"legP",s:4,r:"10-12",rest:90},{id:"incDB",s:3,r:"10-12",rest:90},
-    {id:"cRow",s:3,r:"10-12",rest:90},{id:"lunge",s:3,r:"10/j",rest:60},{id:"tread",s:1,r:"20min",rest:0}]}
+  {name:"POWER CLEAN",sub:"Clean explosif + front squat lourd",color:"var(--pink)",ex:[
+    {id:"pClean",s:5,r:"3",rest:150},{id:"hClean",s:3,r:"3",rest:120},{id:"fSquat",s:5,r:"5",rest:150},
+    {id:"pushP",s:4,r:"5",rest:120},{id:"clnPull",s:3,r:"3",rest:120},{id:"pullUp",s:3,r:"6-10",rest:90}]},
+  {name:"INTERVALLES",sub:"Travail de vitesse",color:"var(--cyan)",ex:[
+    {id:"easyRun",s:1,r:"10min",rest:0},{id:"interval",s:6,r:"1min vite / 2min récup",rest:0},
+    {id:"easyRun",s:1,r:"10min",rest:0},{id:"abW",s:3,r:"12",rest:45}]},
+  {name:"POWER SNATCH",sub:"Snatch explosif + back squat lourd",color:"var(--gold)",ex:[
+    {id:"pSnatch",s:5,r:"3",rest:150},{id:"hSnatch",s:3,r:"3",rest:120},{id:"ohSquat",s:4,r:"5",rest:120},
+    {id:"snPull",s:3,r:"3",rest:120},{id:"squat",s:4,r:"5",rest:150},{id:"fPull",s:3,r:"15",rest:60}]},
+  {name:"BONUS",sub:"Technique légère ou sortie longue",color:"var(--purple)",ex:[
+    {id:"easyRun",s:1,r:"30min",rest:0},{id:"pClean",s:3,r:"3",rest:90},{id:"pSnatch",s:3,r:"3",rest:90},
+    {id:"bhndNP",s:3,r:"8",rest:90},{id:"rope",s:4,r:"3min",rest:60},{id:"plank",s:3,r:"60s",rest:45}]}
 ]},
 
-{id:2,name:"Hypertrophie",sub:"Sculpte la machine",color:"var(--purple)",icon:"💎",minWeek:6,maxWeek:8,
+{id:2,name:"Intensification",sub:"Mouvements complets",color:"var(--purple)",icon:"💎",minWeek:6,maxWeek:8,
 dungeon:"Abîme des Ombres",dungeonIcon:"🌑",
 sessions:[
-  {name:"PUSH VOLUME",sub:"Volume pecs/épaules",color:"var(--pink)",ex:[
-    {id:"bench",s:4,r:"8-10",rest:90},{id:"incBench",s:4,r:"10-12",rest:90},{id:"cableFly",s:3,r:"12-15",rest:60},
-    {id:"arnP",s:4,r:"10-12",rest:90},{id:"latR",s:4,r:"15-20",rest:45},{id:"dip2",s:3,r:"8-10",rest:90}]},
-  {name:"LEGS HYPER",sub:"Jambes sculptées",color:"var(--cyan)",ex:[
-    {id:"squat",s:4,r:"8-10",rest:120},{id:"bulgSplit",s:3,r:"10/j",rest:90},{id:"legP",s:4,r:"12-15",rest:90},
-    {id:"hipT",s:4,r:"10-12",rest:90},{id:"hamC",s:3,r:"10-12",rest:90},{id:"legC",s:3,r:"12-15",rest:60}]},
-  {name:"PULL VOLUME",sub:"Dos & bras massifs",color:"var(--gold)",ex:[
-    {id:"deadlift",s:4,r:"6-8",rest:150},{id:"pullUp",s:4,r:"8-12",rest:90},{id:"tBar",s:4,r:"10-12",rest:90},
-    {id:"fPull",s:3,r:"15-20",rest:60},{id:"curl",s:4,r:"10-12",rest:60},{id:"hammerC",s:3,r:"10-12",rest:60}]},
-  {name:"METCON",sub:"Cardio intense",color:"var(--purple)",ex:[
-    {id:"rope",s:6,r:"2min",rest:45},{id:"bulgSplit",s:3,r:"12/j",rest:60},{id:"dips",s:3,r:"max",rest:60},
-    {id:"chinUp",s:3,r:"max",rest:60},{id:"abW",s:4,r:"12-15",rest:45},{id:"tread",s:1,r:"25min",rest:0}]}
+  {name:"CLEAN & JERK",sub:"Le mouvement roi + front squat",color:"var(--pink)",ex:[
+    {id:"cj",s:5,r:"2",rest:180},{id:"hClean",s:3,r:"3",rest:120},{id:"fSquat",s:4,r:"3-5",rest:150},
+    {id:"pushJ",s:3,r:"3",rest:120},{id:"clnDL",s:3,r:"3",rest:120},{id:"abW",s:3,r:"12",rest:45}]},
+  {name:"TEMPO RUN",sub:"Allure soutenue",color:"var(--cyan)",ex:[
+    {id:"easyRun",s:1,r:"10min",rest:0},{id:"tempo",s:1,r:"15min",rest:0},{id:"easyRun",s:1,r:"5min",rest:0},
+    {id:"interval",s:4,r:"30s vite / 60s récup",rest:0},{id:"easyRun",s:1,r:"5min",rest:0}]},
+  {name:"SNATCH",sub:"L'arraché complet + back squat",color:"var(--gold)",ex:[
+    {id:"snatch",s:5,r:"2",rest:180},{id:"hSnatch",s:3,r:"3",rest:120},{id:"ohSquat",s:3,r:"3-5",rest:120},
+    {id:"snGrDL",s:3,r:"5",rest:120},{id:"pauseS",s:3,r:"3",rest:150},{id:"fPull",s:3,r:"15",rest:60}]},
+  {name:"BONUS",sub:"Complexes ou côtes",color:"var(--purple)",ex:[
+    {id:"pClean",s:3,r:"2",rest:90},{id:"pSnatch",s:3,r:"2",rest:90},{id:"splitJ",s:3,r:"3",rest:90},
+    {id:"hillRun",s:5,r:"2min montée",rest:120},{id:"rdl",s:3,r:"8",rest:90},{id:"pullUp",s:3,r:"max",rest:90}]}
 ]},
 
-{id:3,name:"Performance",sub:"Deviens le Monarch",color:"var(--gold)",icon:"👑",minWeek:9,maxWeek:99,
+{id:3,name:"Performance",sub:"Charges lourdes & objectif 10km",color:"var(--gold)",icon:"👑",minWeek:9,maxWeek:99,
 dungeon:"Palais du Monarque",dungeonIcon:"🏰",
 sessions:[
-  {name:"OLYMPIC DAY",sub:"Haltérophilie",color:"var(--gold)",ex:[
-    {id:"clean",s:5,r:"3-5",rest:180},{id:"pushP",s:4,r:"5-6",rest:150},{id:"fSquat",s:4,r:"6-8",rest:120},
-    {id:"ohp",s:3,r:"8-10",rest:90},{id:"latR",s:3,r:"12-15",rest:60},{id:"plank",s:3,r:"60s",rest:45}]},
-  {name:"STRENGTH",sub:"Force pure",color:"var(--pink)",ex:[
-    {id:"squat",s:5,r:"3-5",rest:180},{id:"pauseB",s:4,r:"5-6",rest:150},{id:"defDL",s:4,r:"5-6",rest:150},
-    {id:"dip2",s:3,r:"6-8",rest:90},{id:"wPullUp",s:3,r:"6-8",rest:90},{id:"abW",s:3,r:"10-12",rest:60}]},
-  {name:"POWER BUILD",sub:"Force + Volume",color:"var(--cyan)",ex:[
-    {id:"snatchP",s:4,r:"3-5",rest:150},{id:"hSquat",s:4,r:"8-10",rest:120},{id:"incBench",s:4,r:"8-10",rest:90},
-    {id:"tBar",s:4,r:"8-10",rest:90},{id:"hipT",s:3,r:"10-12",rest:90},{id:"curl",s:3,r:"10-12",rest:60}]},
-  {name:"CONDITIONING",sub:"Endurance ultime",color:"var(--purple)",ex:[
-    {id:"rope",s:6,r:"3min",rest:45},{id:"clean",s:3,r:"5",rest:90},{id:"bulgSplit",s:3,r:"10/j",rest:60},
-    {id:"pullUp",s:3,r:"max",rest:60},{id:"arnP",s:3,r:"10-12",rest:60},{id:"tread",s:1,r:"30min",rest:0}]}
+  {name:"CLEAN & JERK MAX",sub:"Charge lourde",color:"var(--gold)",ex:[
+    {id:"cj",s:6,r:"1-2",rest:180},{id:"pClean",s:3,r:"2",rest:150},{id:"fSquat",s:5,r:"3",rest:180},
+    {id:"splitJ",s:3,r:"2",rest:120},{id:"clnPull",s:3,r:"3",rest:120},{id:"abW",s:3,r:"12",rest:45}]},
+  {name:"10K PREP",sub:"Tempo + intervalles",color:"var(--cyan)",ex:[
+    {id:"easyRun",s:1,r:"10min",rest:0},{id:"tempo",s:1,r:"20min",rest:0},
+    {id:"interval",s:4,r:"1min vite / 1min récup",rest:0},{id:"easyRun",s:1,r:"5min",rest:0}]},
+  {name:"SNATCH MAX",sub:"Arraché en charge",color:"var(--pink)",ex:[
+    {id:"snatch",s:6,r:"1-2",rest:180},{id:"pSnatch",s:3,r:"2",rest:150},{id:"ohSquat",s:3,r:"3",rest:120},
+    {id:"snGrDL",s:3,r:"3",rest:120},{id:"sots",s:3,r:"5",rest:90},{id:"fPull",s:3,r:"15",rest:60}]},
+  {name:"BONUS",sub:"Total ou sortie longue",color:"var(--purple)",ex:[
+    {id:"cj",s:3,r:"1-2",rest:150},{id:"snatch",s:3,r:"1-2",rest:150},{id:"squat",s:3,r:"3",rest:150},
+    {id:"longRun",s:1,r:"45min",rest:0},{id:"pullUp",s:3,r:"max",rest:90}]}
 ]}
 ];
 
@@ -245,27 +246,27 @@ const BOSS_MONSTERS=[
 ];
 
 const ITEMS_DB=[
-{id:"bandana",n:"Bandana du Novice",i:"🎀",sl:"head",ra:"c",st:{STR:1,END:1,VIT:0,AGI:1},ef:null,d:"Premier pas."},
-{id:"iron_helm",n:"Casque de Fer",i:"⛑️",sl:"head",ra:"r",st:{STR:2,END:3,VIT:1,AGI:0},ef:"def",d:"Protection basique."},
+{id:"bandana",n:"Bandana du Novice",i:"🎀",sl:"head",ra:"c",st:{STR:1,END:1,VIT:0,AGI:1},ef:null,d:"Premier pas du Hunter."},
+{id:"iron_helm",n:"Casque du Lifter",i:"⛑️",sl:"head",ra:"r",st:{STR:2,END:3,VIT:1,AGI:0},ef:"def",d:"Concentration accrue."},
 {id:"shadow_crown",n:"Couronne de l'Ombre",i:"👑",sl:"head",ra:"l",st:{STR:5,END:3,VIT:4,AGI:3},ef:"xp15",d:"+15% XP."},
-{id:"tshirt",n:"T-Shirt Entraînement",i:"👕",sl:"chest",ra:"c",st:{STR:0,END:2,VIT:1,AGI:1},ef:null,d:"Confort basique."},
-{id:"chain",n:"Cotte de Mailles",i:"🦺",sl:"chest",ra:"r",st:{STR:3,END:2,VIT:2,AGI:0},ef:"armor5",d:"+5% réduction dégâts."},
-{id:"titan_armor",n:"Armure du Titan",i:"🛡️",sl:"chest",ra:"e",st:{STR:5,END:4,VIT:3,AGI:-1},ef:"titan",d:"Force brute."},
-{id:"monarch_plate",n:"Plastron du Monarque",i:"⚜️",sl:"chest",ra:"l",st:{STR:6,END:5,VIT:5,AGI:2},ef:"monarch",d:"Stats ×2 en boss."},
-{id:"wraps",n:"Bandes Poignet",i:"🩹",sl:"arms",ra:"c",st:{STR:2,END:0,VIT:0,AGI:0},ef:null,d:"Support basique."},
-{id:"gauntlets",n:"Gantelets de Force",i:"🧤",sl:"arms",ra:"r",st:{STR:4,END:1,VIT:0,AGI:0},ef:"str60",d:"+2 STR si >60kg."},
-{id:"shadow_gloves",n:"Gants de l'Ombre",i:"🖐️",sl:"arms",ra:"e",st:{STR:4,END:2,VIT:1,AGI:3},ef:"crit10",d:"10% crit (×2 dmg)."},
-{id:"sneakers",n:"Baskets Entraînement",i:"👟",sl:"legs",ra:"c",st:{STR:0,END:1,VIT:0,AGI:3},ef:null,d:"Légères."},
-{id:"squat_shoes",n:"Chaussures Haltéro",i:"👞",sl:"legs",ra:"r",st:{STR:3,END:1,VIT:1,AGI:1},ef:"legs10",d:"+10% dmg jambes."},
-{id:"titan_boots",n:"Bottes du Titan",i:"🥾",sl:"legs",ra:"e",st:{STR:4,END:3,VIT:2,AGI:0},ef:"rest10",d:"Repos -10s."},
-{id:"dagger",n:"Dague Rouillée",i:"🗡️",sl:"weapon",ra:"c",st:{STR:2,END:0,VIT:0,AGI:1},ef:null,d:"Un début."},
-{id:"hammer",n:"Marteau de Guerre",i:"🔨",sl:"weapon",ra:"r",st:{STR:5,END:2,VIT:0,AGI:-1},ef:"dmg20",d:"+20% dmg."},
-{id:"shadow_blade",n:"Lame de l'Ombre",i:"⚔️",sl:"weapon",ra:"e",st:{STR:6,END:1,VIT:2,AGI:3},ef:"berserk",d:"+15% si RPE≥4."},
-{id:"monarch_sword",n:"Épée du Monarque",i:"🌟",sl:"weapon",ra:"l",st:{STR:8,END:3,VIT:3,AGI:4},ef:"dmg50",d:"×1.5 dmg permanent."},
-{id:"shaker",n:"Shaker Magique",i:"🥤",sl:"acc",ra:"c",st:{STR:0,END:0,VIT:3,AGI:0},ef:null,d:"+VIT récup."},
-{id:"belt",n:"Ceinture Puissance",i:"🥋",sl:"acc",ra:"r",st:{STR:3,END:2,VIT:2,AGI:0},ef:"core10",d:"+10% dmg core."},
-{id:"amulet",n:"Amulette de l'Éveil",i:"📿",sl:"acc",ra:"e",st:{STR:2,END:2,VIT:4,AGI:2},ef:"xp20q",d:"+20% XP quêtes."},
-{id:"ring",n:"Anneau du Système",i:"💍",sl:"acc",ra:"l",st:{STR:4,END:4,VIT:4,AGI:4},ef:"all4",d:"All stats +4."},
+{id:"tshirt",n:"T-Shirt Technique",i:"👕",sl:"chest",ra:"c",st:{STR:0,END:2,VIT:1,AGI:1},ef:null,d:"Liberté de mouvement."},
+{id:"chain",n:"Singlet d'Haltéro",i:"🦺",sl:"chest",ra:"r",st:{STR:3,END:2,VIT:2,AGI:0},ef:"armor5",d:"Le vêtement du lifter sérieux."},
+{id:"titan_armor",n:"Singlet du Titan",i:"🛡️",sl:"chest",ra:"e",st:{STR:5,END:4,VIT:3,AGI:-1},ef:"titan",d:"Puissance brute."},
+{id:"monarch_plate",n:"Armure du Monarque",i:"⚜️",sl:"chest",ra:"l",st:{STR:6,END:5,VIT:5,AGI:2},ef:"monarch",d:"Stats ×2 en boss."},
+{id:"wraps",n:"Bandes Poignet",i:"🩹",sl:"arms",ra:"c",st:{STR:2,END:0,VIT:0,AGI:0},ef:null,d:"Support basique pour les poignets."},
+{id:"gauntlets",n:"Straps de Force",i:"🧤",sl:"arms",ra:"r",st:{STR:4,END:1,VIT:0,AGI:0},ef:"str60",d:"+2 STR si >60kg sur la barre."},
+{id:"shadow_gloves",n:"Grips de l'Ombre",i:"🖐️",sl:"arms",ra:"e",st:{STR:4,END:2,VIT:1,AGI:3},ef:"crit10",d:"10% chance de coup critique (×2 dmg)."},
+{id:"sneakers",n:"Running Shoes",i:"👟",sl:"legs",ra:"c",st:{STR:0,END:1,VIT:0,AGI:3},ef:null,d:"Légères pour la course."},
+{id:"squat_shoes",n:"Chaussures d'Haltéro",i:"👞",sl:"legs",ra:"r",st:{STR:3,END:1,VIT:1,AGI:1},ef:"legs10",d:"+10% dmg sur les lifts. Le talon surélevé change tout."},
+{id:"titan_boots",n:"Romaleos du Titan",i:"🥾",sl:"legs",ra:"e",st:{STR:4,END:3,VIT:2,AGI:0},ef:"rest10",d:"Stabilité maximale. Repos -10s."},
+{id:"dagger",n:"Barre d'Entraînement",i:"🗡️",sl:"weapon",ra:"c",st:{STR:2,END:0,VIT:0,AGI:1},ef:null,d:"Une barre standard. Un début."},
+{id:"hammer",n:"Barre Olympique",i:"🔨",sl:"weapon",ra:"r",st:{STR:5,END:2,VIT:0,AGI:-1},ef:"dmg20",d:"20kg, roulements lisses. +20% dégâts."},
+{id:"shadow_blade",n:"Barre de Compétition",i:"⚔️",sl:"weapon",ra:"e",st:{STR:6,END:1,VIT:2,AGI:3},ef:"berserk",d:"+15% dégâts quand RPE ≥ 4. Le whip parfait."},
+{id:"monarch_sword",n:"Barre du Monarque",i:"🌟",sl:"weapon",ra:"l",st:{STR:8,END:3,VIT:3,AGI:4},ef:"dmg50",d:"×1.5 dégâts permanent. La barre légendaire."},
+{id:"shaker",n:"Shaker Protéiné",i:"🥤",sl:"acc",ra:"c",st:{STR:0,END:0,VIT:3,AGI:0},ef:null,d:"Récupération +VIT."},
+{id:"belt",n:"Ceinture d'Haltéro",i:"🥋",sl:"acc",ra:"r",st:{STR:3,END:2,VIT:2,AGI:0},ef:"core10",d:"Support lombaire. +10% dmg lifts."},
+{id:"amulet",n:"Magnésie Enchantée",i:"📿",sl:"acc",ra:"e",st:{STR:2,END:2,VIT:4,AGI:2},ef:"xp20q",d:"Grip parfait. +20% XP quêtes."},
+{id:"ring",n:"Anneau du Système",i:"💍",sl:"acc",ra:"l",st:{STR:4,END:4,VIT:4,AGI:4},ef:"all4",d:"Toutes les stats +4."},
 ];
 
 const LOOT={
@@ -285,15 +286,16 @@ const QUESTS=[
 {id:"w20",n:"Inarrêtable",d:"20 séances",ck:d=>d.t>=20,xp:300,o:true},
 {id:"s30",n:"Force +30",d:"30 STR",ck:d=>(d.st?.STR||0)>=30,xp:120,o:true},
 {id:"s50",n:"Force +50",d:"50 STR",ck:d=>(d.st?.STR||0)>=50,xp:200,o:true},
-{id:"h60",n:"60kg+",d:"Lève 60kg+",ck:d=>d.mw>=60,xp:80,o:true},
-{id:"h80",n:"80kg+",d:"Lève 80kg+",ck:d=>d.mw>=80,xp:150,o:true},
-{id:"h100",n:"Centurion",d:"Lève 100kg+",ck:d=>d.mw>=100,xp:300,o:true},
+{id:"h40",n:"40kg en haltéro",d:"Lève 40kg+ en clean/snatch",ck:d=>d.mw>=40,xp:80,o:true},
+{id:"h60",n:"60kg en haltéro",d:"Lève 60kg+",ck:d=>d.mw>=60,xp:150,o:true},
+{id:"h80",n:"80kg Club",d:"Lève 80kg+",ck:d=>d.mw>=80,xp:250,o:true},
+{id:"h100",n:"Centurion",d:"Lève 100kg+",ck:d=>d.mw>=100,xp:400,o:true},
 {id:"k1",n:"Premier Kill",d:"Vainc 1 monstre",ck:d=>d.kl>=1,xp:100,o:true},
 {id:"k5",n:"Chasseur",d:"Vainc 5 monstres",ck:d=>d.kl>=5,xp:200,o:true},
 {id:"e3",n:"S'équiper",d:"Équipe 3 items",ck:d=>d.eq>=3,xp:80,o:true},
-{id:"p2",n:"Donjon II",d:"Atteins la Phase 2",ck:d=>d.ph>=1,xp:200,o:true},
-{id:"p3",n:"Donjon III",d:"Atteins la Phase 3",ck:d=>d.ph>=2,xp:300,o:true},
-{id:"p4",n:"Donjon IV",d:"Atteins la Phase 4",ck:d=>d.ph>=3,xp:500,o:true},
+{id:"p2",n:"Caverne du Titan",d:"Atteins la Phase 2",ck:d=>d.ph>=1,xp:200,o:true},
+{id:"p3",n:"Abîme des Ombres",d:"Atteins la Phase 3",ck:d=>d.ph>=2,xp:300,o:true},
+{id:"p4",n:"Palais du Monarque",d:"Atteins la Phase 4",ck:d=>d.ph>=3,xp:500,o:true},
 ];
 
 const RPE=[
@@ -404,7 +406,7 @@ function renderOnboard(){
     <div style="font-size:72px" class="float">⚔️</div>
     <h1 class="title" style="font-size:28px;color:var(--pink);margin:12px 0 4px">ARISE</h1>
     <p class="pixel" style="font-size:7px;color:var(--text2);letter-spacing:2px;margin-bottom:24px">HUNTER FITNESS SYSTEM v2</p>
-    <p style="color:var(--text2);max-width:280px;line-height:1.7;margin-bottom:28px">Tu as été inactif trop longtemps. Ton corps attend.<br>Il est temps de te relever.</p>
+    <p style="color:var(--text2);max-width:280px;line-height:1.7;margin-bottom:28px">2 haltéro. 1 course. 1 bonus.<br>Perds le bide. Reprends du muscle.<br>Vise le 10km sous 40 min.</p>
     <input id="ob-n" class="inp" placeholder="Ton nom, Hunter..." style="max-width:260px;margin-bottom:16px">
     <button class="btn btn-p btn-bl" style="max-width:260px" id="ob-go">⚔️ Commencer l'Éveil</button>
   </div>`;
@@ -504,9 +506,9 @@ function rProg(){
     </div>`;}).join('')}
 
   <div class="box mt1"><div style="font-size:12px;color:var(--text2);line-height:1.8">
-    <strong style="color:var(--text)">💡 Progression auto</strong><br>Les charges suggérées s'adaptent selon ton RPE. ★ = charge de départ estimée.<br><br>
-    <strong style="color:var(--text)">📅 Phases</strong><br>Sem. 1-2 Réadaptation → Sem. 3-5 Force → Sem. 6-8 Hypertrophie → Sem. 9+ Performance &amp; Haltéro<br><br>
-    <strong style="color:var(--text)">📏 1RM</strong><br>Calculés auto à partir de tes perfs. Pas besoin de tester en max.
+    <strong style="color:var(--text)">💡 Structure : 2 haltéro + 1 course + 1 bonus</strong><br>Jour 1 = Clean + front squat. Jour 2 = Course structurée (intervalles/tempo). Jour 3 = Snatch + back squat. Jour 4 = Bonus libre (course facile, technique légère, ou rien sans culpabilité).<br><br>
+    <strong style="color:var(--text)">📅 Phases</strong><br>Sem. 1-2 Technique (hang, pulls) → Sem. 3-5 Power (réceptions hautes, charges progressives) → Sem. 6-8 Complet (clean&amp;jerk, snatch) → Sem. 9+ Performance (charges max + objectif 10km)<br><br>
+    <strong style="color:var(--text)">🎯 Objectifs</strong><br>Perte de gras (alimentation + volume d'entraînement), gain musculaire (squats lourds + tirages), technique haltéro (2×/sem), objectif 10km (1 séance course structurée/sem + puissance des jambes via haltéro). ★ = charge de départ.
   </div></div>
   </div>`;
 }
@@ -812,7 +814,7 @@ async function fetchAI(){
 
   try{
     const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':S.key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-      body:JSON.stringify({model:'claude-haiku-4-5-20241022',max_tokens:300,messages:[{role:'user',content:`Tu es le "Système" d'un programme fitness gamifié style Solo Leveling. Parle en français, concis et motivant.
+      body:JSON.stringify({model:'claude-haiku-4-5-20241022',max_tokens:300,messages:[{role:'user',content:`Tu es le "Système" d'un programme fitness gamifié style Solo Leveling. Parle en français, concis et motivant. Le programme: 2 séances haltéro (clean, snatch, squats lourds) + 1 course structurée + 1 bonus. Objectifs: perte de graisse, gain musculaire, progresser en haltéro, objectif 10km sous 40min à terme.
 Séance: ${sess.name} | RPE: ${rp?.l} (${WS.rpe}/5) | Volume: ${Math.round(tv)}kg | Semaine: ${S.week} | Phase: ${gPhase().name}
 Stats: STR ${S.stats.STR}, END ${S.stats.END}, VIT ${S.stats.VIT}, AGI ${S.stats.AGI}
 Exercices:\n${exSum}
@@ -857,3 +859,4 @@ render();
 </script>
 </body>
 </html>
+
